@@ -10,23 +10,10 @@ class Walker {
     }
 
     step() {
-        let choice = floor(random(4))
+        let choiceX = random(-1,1)
+        let choiceY = random(-1, 1)
 
-        switch (choice) {
-            case 0:
-                this.x++
-                break;
-            case 1:
-                this.x--
-                break;
-            case 2:
-                this.y++
-                break;
-            case 3:
-                this.y--
-                break;
-            default:
-                break;
-        }
+        this.x += choiceX
+        this.y += choiceY
     }
 }
