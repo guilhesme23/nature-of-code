@@ -7,5 +7,5 @@ function setup() {
 
 function draw() {
     walker.display()
-    walker.modStep()
+    walker.step()
 }

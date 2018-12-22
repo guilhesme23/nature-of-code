@@ -2,6 +2,8 @@ class Walker {
     constructor() {
         this.x = width/2;
         this.y = height/2;
+        this.tx = 0
+        this.ty = 10000
     }
 
     display() {
@@ -10,11 +12,11 @@ class Walker {
     }
 
     step() {
-        let choiceX = random(-1,1)
-        let choiceY = random(-1, 1)
+        this.x = map(noise(this.tx), 0, 1, 0, width);
+        this.y = map(noise(this.ty), 0, 1, 0, height);
 
-        this.x += choiceX
-        this.y += choiceY
+        this.tx += 0.01;
+        this.ty += 0.01;
     }
 
     modStep()  {
