@@ -16,4 +16,18 @@ class Walker {
         this.x += choiceX
         this.y += choiceY
     }
+
+    modStep()  {
+        let choice = random(1)
+
+        if (choice <= 0.2) {
+            this.y++
+        } else if (choice < 0.4) {
+            this.y--
+        } else if (choice < 0.6) {
+            this.x--
+        } else {
+            this.x++
+        }
+    }
 }
